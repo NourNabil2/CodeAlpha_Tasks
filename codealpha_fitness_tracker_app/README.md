@@ -1,4 +1,4 @@
-# codealpha_random_quote_generator
+# codealpha_fitness_tracker_app
 
 A new Flutter project.
 
