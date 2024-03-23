@@ -1,3 +1,6 @@
+
+import 'dart:developer';
+
 import 'package:codealpha_random_quote_generator/quote_model.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
@@ -27,10 +30,18 @@ class _HomePageState extends State<HomePage> {
       
         child: Scaffold(
           appBar: AppBar(
+            title:  const Text(
+              "Random Quotes",
+              style: TextStyle(
+                color: Colors.black,
+                fontFamily: 'monospace',
+                fontSize: 24,
+              ),
+            ),
             leading: IconButton(onPressed: () async {
              await Share.share('${quote!.q} \n Writer: ${quote!.a}',subject: 'Random Quote',sharePositionOrigin: Rect.fromCenter(center: Offset.zero, width: 50, height: 100));
 
-            }, icon: Icon(Icons.share,color: Colors.white,)),
+            }, icon: Icon(Icons.share,color: Colors.black,)),
           ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -38,14 +49,6 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                "Quotes",
-                style: TextStyle(
-                  color: Colors.red,
-                  fontFamily: 'monospace',
-                  fontSize: 24,
-                ),
-              ),
               const Spacer(),
               Text(
                 quote?.q ?? "_____________",
@@ -59,24 +62,24 @@ class _HomePageState extends State<HomePage> {
                 quote?.a ?? ".....",
                 style: const TextStyle(
                   fontSize: 20,
-                  color: Colors.white54,
+                  color: Colors.grey,
                   fontFamily: 'serif',
                 ),
               ),
               const Spacer(),
               inProgress
                   ? const CircularProgressIndicator(
-                      color: Colors.white,
+                      color: Colors.black,
                     )
                   : ElevatedButton(
                       onPressed: () {
                         _fetchQuote();
                       },
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.white),
+                          backgroundColor: Colors.black),
                       child: const Text(
                         "Generate",
-                        style: TextStyle(color: Colors.black87),
+                        style: TextStyle(color: Colors.white),
                       ),
                     )
             ],
@@ -92,12 +95,12 @@ class _HomePageState extends State<HomePage> {
     });
     try {
       final fetchedQuote = await Api.fetchRandomQuote();
-      debugPrint(fetchedQuote.toJson().toString());
+
       setState(() {
         quote = fetchedQuote;
       });
     } catch (e) {
-      debugPrint("Failed to generate quote");
+   log(e.toString());
     } finally {
       setState(() {
         inProgress = false;

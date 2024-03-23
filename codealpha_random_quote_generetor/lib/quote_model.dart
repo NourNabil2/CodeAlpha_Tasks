@@ -1,21 +1,24 @@
 class QuoteModel {
-  String? q;
-  String? a;
-  String? h;
+  QuoteModel({
+    required this.q,
+    required this.a,
+    required this.h,
+  });
+  late final String q;
+  late final String a;
+  late final String h;
 
-  QuoteModel({this.q, this.a, this.h});
-
-  QuoteModel.fromJson(Map<String, dynamic> json) {
+  QuoteModel.fromJson(Map<String, dynamic> json){
     q = json['q'];
     a = json['a'];
     h = json['h'];
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['q'] = this.q;
-    data['a'] = this.a;
-    data['h'] = this.h;
-    return data;
+    final _data = <String, dynamic>{};
+    _data['q'] = q;
+    _data['a'] = a;
+    _data['h'] = h;
+    return _data;
   }
 }
