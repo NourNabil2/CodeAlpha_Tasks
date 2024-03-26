@@ -1,9 +1,7 @@
 ## CodeAlpha Internship
 This is repo of Internship which I got from the Code-Alpha . According to the rule 3 tasks are given and you have to do all the tasks to complete the internship.
 All the tasks are based on App-Dev using Flutter. 
-## About 
-- Internship on AppDev
-- Contains Three projects
+
 ## Tech Used
 - Flutter
 
