@@ -1,1 +1,41 @@
-# CodeAlpha_Tasks
+## CodeAlpha Internship
+This is repo of Internship which I got from the Code-Alpha . According to the rule 3 tasks are given and you have to do all the tasks to complete the internship.
+All the tasks are based on App-Dev using Flutter. 
+## About 
+- Internship on AppDev
+- Contains Three projects
+## Tech Used
+- Flutter
+
+## List of Tasks
+- Flashcard Quiz App.
+- Random Quote Generator.
+- Fitness Tracker App. 
+
+## Task 1: Flashcard Quiz App
+- ✔️ Create a flashcard quiz app for studying. Users can
+add flashcards with questions and answers, then
+quiz themselves on the material. Track and display
+quiz scores.
+
+<br/>
+## Task 2: Random Quote Generator
+- ✔️ Create an app that generates random quotes. Users can
+click a button to get a new quote, and you can include
+features like sharing the quote on social media.
+
+<br>
+
+## Task 3: Fitness Tracker App
+- ✔️ Develop a fitness tracking app that allows users to
+record and track their workouts, set fitness goals, and
+view their progress over time. Include features for
+recording different types of exercises and workouts.
+
+ 
+<br/> 
+<br/> 
+ 
+## COMPLETION CERTIFICATE OF INTERNSHIP
+
+![Code Alpha Internship completion certificate]()
